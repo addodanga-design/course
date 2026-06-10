@@ -1,0 +1,151 @@
+git --version
+
+Displays the currently installed Git version on your computer. It is commonly used to verify that Git is installed correctly and to check which version you are using.
+
+git config --global user.name "Your Name"
+
+Sets the username that Git will attach to all commits you create. This name appears in the commit history and identifies the author of the changes.
+
+git config --global user.email "you@example.com"
+
+Sets the email address associated with your commits. Platforms like GitHub use this email to connect commits to your account.
+
+git config --list
+
+Shows all Git configuration settings currently active on your system, including your username, email, default editor, and other preferences.
+
+git init
+
+Creates a new Git repository in the current folder. After running this command, Git begins tracking changes inside the project.
+
+git clone <url>
+
+Downloads a complete copy of an existing remote repository from GitHub or another Git server to your local machine.
+
+git status
+
+Displays the current state of the repository, including modified files, staged files, untracked files, and the current branch.
+
+git add <file>
+
+Adds a specific file to the staging area. Only staged files will be included in the next commit.
+
+git add .
+
+Adds all new, modified, and deleted files in the current project to the staging area at once.
+
+git commit -m "message"
+
+Creates a new commit containing all staged changes. The message should clearly describe what changes were made.
+
+git log
+
+Shows the complete commit history of the repository, including commit IDs, authors, dates, and commit messages.
+
+git log --oneline
+
+Shows a simplified version of the commit history, displaying one commit per line for easier reading.
+
+git diff
+
+Displays the exact differences between your current files and the last committed version before the changes are staged.
+
+git diff --staged
+
+Shows the differences between the staged files and the most recent commit, allowing you to review what will be committed.
+
+git restore <file>
+
+Discards all uncommitted changes in a file and restores it to the state of the last commit.
+
+git restore --staged <file>
+
+Removes a file from the staging area without deleting the modifications you made to it.
+
+git rm <file>
+
+Deletes a file from the project and stages that deletion so it can be recorded in the next commit.
+
+git mv old.txt new.txt
+
+Renames or moves a file while allowing Git to track the change properly.
+
+git branch
+
+Lists all local branches in the repository and indicates the branch you are currently using.
+
+git branch <name>
+
+Creates a new branch without switching to it. This is useful for developing new features separately.
+
+git checkout <branch>
+
+Switches your working directory to another branch so you can work on a different version of the project.
+
+git checkout -b <name>
+
+Creates a new branch and immediately switches to it in a single command.
+
+git switch <branch>
+
+A modern alternative to git checkout for switching between branches.
+
+git switch -c <name>
+
+Creates a new branch and switches to it using the modern branch management syntax.
+
+git merge <branch>
+
+Combines the changes from another branch into the current branch. This is commonly used when finishing a feature branch.
+
+git branch -d <name>
+
+Deletes a branch that is no longer needed, usually after it has been merged.
+
+git remote -v
+
+Displays all remote repositories connected to the project and their URLs.
+
+git remote add origin <url>
+
+Connects the local repository to a remote repository, usually hosted on GitHub.
+
+git push origin main
+
+Uploads local commits from the main branch to the remote repository.
+
+git pull origin main
+
+Downloads the latest changes from the remote repository and automatically merges them into the current branch.
+
+git fetch
+
+Downloads updates from the remote repository without merging them. This allows you to inspect changes before integrating them.
+
+git reset --soft HEAD~1
+
+Removes the latest commit while keeping all changes staged and ready for another commit.
+
+git reset --mixed HEAD~1
+
+Removes the latest commit and unstages the changes, while keeping the actual file modifications.
+
+git reset --hard HEAD~1
+
+Removes the latest commit and permanently deletes all associated changes from your working directory.
+
+git stash
+
+Temporarily saves uncommitted changes and cleans the working directory so you can switch tasks or branches safely.
+
+git stash pop
+
+Restores the most recently stashed changes and removes them from the stash list.
+
+git tag <name>
+
+Creates a tag for a specific commit. Tags are commonly used to mark releases such as v1.0 or v2.0.
+
+git help <command>
+
+Opens the official documentation for a specific Git command and displays its syntax, options, and usage examples.
